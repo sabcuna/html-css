@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou, simplesmente, aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture> 
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture><!--o max-width é o tamanho da imagem, podendo-se adicionar 50px. Sempre a imagem mais pequena deve estar em cima, a média no meio e a grande em baixo. Mas começa-se de baixo para cima, ou seja, com a imagem grande até a pequena.-->
+    <h1>Reproduzindo o áudio</h1>
+    <p>Vamos aprender a reproduzir o áudio em HTML5</p>
+    <audio preload="auto" autoplay controls> <!--loop antes do autoplay para repetir o audio. audios recmdveis: ogg e mp3-->
+        <source src="midia/the41players.mp3" type="audio/mpeg">
+        <source src="midia/the41players.mp3" type="audio/ogg">
+        <source src="midia/the41players.mp3" type="audio/wav">
+    </audio> 
+    <!--Pode, às vezes o navegador não conseguir reproduzir o àudio, para tal faz-se o seguinte, podendo ainda converter-se os audios para os outros formatos, onde o programa tentará reproduzir de cima para baixo até achar o compatível:</p>
+    Quando temos a certeza da compatibilidade do áudio, apenas escrevemos:
+    <audio src="midia/the41players.mp3" controls autoplay></audio>
+-->
+</body>
+</html>
